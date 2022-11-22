@@ -1,0 +1,15 @@
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+
+---PowerShell----
+$env:AWS_ACCESS_KEY_ID="XXXX"
+$env:AWS_SECRET_ACCESS_KEY="YYY"
+$env:AWS_DEFAULT_REGION="us-east-1"
+
+-----Linux-----
+export AWS_ACCESS_KEY_ID="XXXX"
+export AWS_SECRET_ACCESS_KEY="YYY"
+
+
+
+

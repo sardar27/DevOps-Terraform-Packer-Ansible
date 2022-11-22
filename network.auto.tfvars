@@ -1,0 +1,6 @@
+# public_subnet1_cidr = "192.168.1.0/24"
+# public_subnet1_name = "Public-Subnet-1"
+# public_subnet2_cidr = "192.168.2.0/24"
+# public_subnet2_name = "Public-Subnet-2"
+# public_subnet3_cidr = "192.168.3.0/24"
+# public_subnet3_name = "Public-Subnet-3"
