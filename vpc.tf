@@ -3,6 +3,9 @@ resource "aws_vpc" "default" {
   tags = {
     Name = var.vpc_name
   }
+  depends_on = [
+    aws_s3_bucket.devopsvpcflowlogs
+  ]
 }
 
 resource "aws_internet_gateway" "default" {
