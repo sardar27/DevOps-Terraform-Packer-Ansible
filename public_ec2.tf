@@ -13,6 +13,6 @@ resource "aws_instance" "web-1" {
     CostCenter = "ABCD"
   }
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
