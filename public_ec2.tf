@@ -14,6 +14,6 @@ resource "aws_instance" "web-1" {
   }
   lifecycle {
     prevent_destroy = false
-    ignore_changes = [tags]
+    ignore_changes  = [tags]
   }
 }
