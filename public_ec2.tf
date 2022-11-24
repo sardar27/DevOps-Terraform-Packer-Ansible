@@ -5,8 +5,7 @@ resource "aws_instance" "web-1" {
   key_name               = var.key_name
   subnet_id              = aws_subnet.subnet1-public.id
   vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
-  #associate_public_ip_address = false
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   tags = {
     Name       = "Server-1"
     Env        = "Prod"
