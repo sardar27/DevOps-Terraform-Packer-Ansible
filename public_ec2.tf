@@ -12,7 +12,7 @@ resource "aws_instance" "web-1" {
     Owner      = "Sree"
     CostCenter = "ABCD"
   }
-  #lifecycle {
-  #  prevent_destroy = true
-  #}
+  lifecycle {
+    prevent_destroy = true
+  }
 }
