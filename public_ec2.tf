@@ -8,7 +8,7 @@ resource "aws_instance" "web-1" {
   associate_public_ip_address = true
   tags = {
     Name       = "${var.vpc_name}-${var.env}-Server-1"
-    Env = var.env
+    Env        = var.env
     Owner      = "Sree"
     CostCenter = "ABCD"
   }
