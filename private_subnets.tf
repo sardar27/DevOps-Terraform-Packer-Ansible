@@ -5,6 +5,7 @@ resource "aws_subnet" "subnet1-private" {
 
   tags = {
     Name = "${var.private_subnet1_name}"
+    Env = var.env
   }
 }
 
@@ -15,6 +16,7 @@ resource "aws_subnet" "subnet2-private" {
 
   tags = {
     Name = "${var.private_subnet2_name}"
+    Env = var.env
   }
 }
 
@@ -25,5 +27,6 @@ resource "aws_subnet" "subnet3-private" {
 
   tags = {
     Name = "${var.private_subnet3_name}"
+    Env = var.env
   }
 }
