@@ -8,7 +8,7 @@ terraform {
   }
   backend "s3" {
     bucket         = "devops28terraformstate0143"
-    key            = "workspaces.tfstate"
+    key            = "newtesting.tfstate"
     region         = "us-east-1"
     dynamodb_table = "devops28terraformlocks"
     encrypt        = true
