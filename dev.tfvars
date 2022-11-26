@@ -1,4 +1,4 @@
-vpc_name             = "SUPERSTAR"
+vpc_name             = "DevOps27"
 cidr_block           = "172.28.0.0/16"
 public_subnet1_cidr  = "172.28.1.0/24"
 public_subnet1_name  = "Public-Subnet-1"
