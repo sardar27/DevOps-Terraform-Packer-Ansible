@@ -1,5 +1,5 @@
 resource "aws_instance" "private_servers" {
-  count                       = 3
+  count                       = var.env == "PROD" ? 3:1
   ami                         = var.imagename
   instance_type               = var.instance_type
   key_name                    = var.key_name
