@@ -1,4 +1,4 @@
-resource "aws_instance" "public_servers" {
+resource "aws_instance" "private_servers" {
   count                       = 3
   ami                         = var.imagename
   instance_type               = var.instance_type
@@ -7,15 +7,16 @@ resource "aws_instance" "public_servers" {
   vpc_security_group_ids      = ["${aws_security_group.allow_all.id}"]
   associate_public_ip_address = true
   tags = {
-    Name       = "${var.vpc_name}-Public-Server-${count.index + 1}"
+    Name       = "${var.vpc_name}-Private-Server-${count.index + 1}"
     Env        = var.env
     Owner      = "Sree"
     CostCenter = "ABCD"
   }
-  user_data = <<-EOF
+  user_data  = <<-EOF
 		#!/bin/bash
     sudo apt-get update
 		sudo apt-get install -y nginx jq net-tools
-		echo "<h1>${var.vpc_name}-Public-Server-${count.index + 1}</h1>" | sudo tee /var/www/html/index.nginx-debian.html
+		echo "<h1>${var.vpc_name}-Private-Server-${count.index + 1}</h1>" | sudo tee /var/www/html/index.nginx-debian.html
 	EOF
+  depends_on = [aws_nat_gateway.nat_gw]
 }
